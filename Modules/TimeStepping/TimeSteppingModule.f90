@@ -216,6 +216,8 @@ CONTAINS
 
     DO WHILE( t < t_end )
 
+      CALL begin_timestep()
+
       iCycle = iCycle + 1
 
       IF( FixedTimeStep )THEN
@@ -270,6 +272,8 @@ CONTAINS
         WriteOutput = .FALSE.
 
       END IF
+
+      CALL end_timestep()
 
     END DO
 

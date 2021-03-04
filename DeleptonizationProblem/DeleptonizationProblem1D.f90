@@ -19,6 +19,8 @@ PROGRAM DeleptonizationProblem1D
 
   IMPLICIT NONE
 
+  CALL init_timestep()
+
   CALL InitializeProgram &
          ( ProgramName_Option &
              = 'DeleptonizationProblem1D', &
@@ -77,6 +79,7 @@ PROGRAM DeleptonizationProblem1D
            dt_write = 1.0d-0 * Millisecond, &
            UpdateFields = SI_RK )
 
+  CALL exit_timestep()
   CALL FinalizeProgram
 
 END PROGRAM DeleptonizationProblem1D
