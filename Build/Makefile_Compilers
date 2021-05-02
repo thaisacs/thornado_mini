@@ -9,7 +9,7 @@ SUFFIX_f90_titan_gnu  =
 SUFFIX_f90_titan_cray =
 SUFFIX_f90            = $(SUFFIX_f90_$(MACHINE))
 
-FLINKER_mymachine  = mpif90 ../../../../utils/kernel_stats.o
+FLINKER_mymachine  = mpif90 ../../../../utils/obj/*.o
 FLINKER_mac_gnu    = mpif90 -fopenmp
 FLINKER_titan_gnu  = ftn
 FLINKER_titan_cray = ftn
