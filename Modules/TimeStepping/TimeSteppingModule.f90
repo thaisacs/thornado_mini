@@ -277,6 +277,8 @@ CONTAINS
 
     END DO
 
+    CALL after_timestep();
+
     WallTime(1) = MPI_WTIME( )
 
     WRITE(*,*)
